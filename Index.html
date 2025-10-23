@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Sweet Treats Bakery</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Welcome to Sweet Treats Bakery!</h1>
+        <p>We bake fresh, delicious desserts with love every day!</p>
+    </section>
+    <section class="search">
+        <h2>Search for a Product</h2>
+        <label for="product-search">Choose a product:</label>
+        <select id="product-search" onchange="displaySelectedProduct()">
+            <option value="">--Select a product--</option>
+            <option value="Fruit Cake">Fruit Cake</option>
+            <option value="Chocolate Cake">Chocolate Cake</option>
+            <option value="Vanilla cupcakes">Vanilla Cupcakes</option>
+        </select>
+    </section>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="fcake.jpg" alt="Delecious Fruit Cake">
+                <h3>Fruit Cake (1 kg)</h3>
+                <p>Rich, healthy fruit cake</p>
+                <p>$15.00</p>
+            <button class="add-to-cart" onclick="addToCart('Fruit Cake',15)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="ccake.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Cake (1 kg)</h3>
+                <p>Soft and icy choco cake</p>
+                <p>$10.00</p> 
+            <button class="add-to-cart" onclick="addToCart('Chocolate Cake',10)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="cupcakes.jpg" alt="Vanilla Cupcakes">
+                <h3>Vanilla Cupcakes (2 pieces)</h3>
+                <p>Fluffy vanilla cupcakes</p>
+                <p>$5.00</p>
+            <button class="add-to-cart" onclick="addToCart('Vanilla Cupcakes',5)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Sweet Treats Bakery, we specialize in creating homemade, mouth-watering baked goods. Our mission is to bring joy to every bite.</p>
+    </section>
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button id="checkout" onclick="checkout()">Proceed to Checkout</button>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Address" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Sweet Treats Bakery. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
